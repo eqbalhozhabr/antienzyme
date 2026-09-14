@@ -1,0 +1,2 @@
+# Contains a plaintext BGA Studio SFTP password -- must never be committed to a public repo.
+.vscode/

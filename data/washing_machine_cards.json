@@ -1,0 +1,61 @@
+{
+  "_readme": "Extracted by visually analyzing all 29 unique card images in the 'WashingMachine Cards' Google Drive folder. 'number' is the enzyme number the card washes (1-5), or 'HAT' for the 4 special cards that clean the center instead. 'rotationAmount' is how many 72-degree wedge-steps ring 1 (outer) rotates; ring 3 (inner) rotates the same amount in the opposite direction; ring 2 (middle) never moves. 'rotationArrow' is 'up' or 'down' matching the two visually distinct hook-arrow icons seen on the cards -- WHICH one is clockwise vs counterclockwise on the physical board has NOT been confirmed with the designer yet, treat as a provisional label pending confirmation. 'activeWedges' lists the wedge IDs (see board-topology memory / wedges reference) whose matching-numbered stains get washed by this card; every other wedge is unaffected even with a matching number. Confidence: number+rotation are read with high confidence (large, unambiguous icons). activeWedges are high confidence for cards 1-24, and good-but-should-be-spot-checked for cards 25-29 (denser/more unusual combinations, small hand-drawn details) -- verify against the original images before shipping.",
+  "wedges": {
+    "ring1_outer_rotates_with_card": {
+      "R1_BlueTop":   {"numbers": [1,2,3,4,5]},
+      "R1_Pink":      {"numbers": [1,2,3,4,5]},
+      "R1_BlueBottom":{"numbers": [1,2,3,4,5]},
+      "R1_GreenBL":   {"numbers": [1,2,3,4,5]},
+      "R1_Olive":     {"numbers": [1,2,3,4,5]}
+    },
+    "ring2_middle_never_rotates": {
+      "R2_Lavender": {"numbers": [3,4,5]},
+      "R2_Green":    {"numbers": [1,2,5]},
+      "R2_Mustard":  {"numbers": [2,3,4]},
+      "R2_Red":      {"numbers": [1,4,5]},
+      "R2_Orange":   {"numbers": [1,2,3]}
+    },
+    "ring3_inner_rotates_opposite_of_ring1": {
+      "R3_RedMitten":  {"numbers": [1,2]},
+      "R3_BlueGlove":  {"numbers": [4,5]},
+      "R3_GraySock":   {"numbers": [2,3]},
+      "R3_GreenMitten":{"numbers": [1,5]},
+      "R3_KhakiGlove": {"numbers": [3,4]}
+    },
+    "center": {
+      "Hat": {"numbers": [], "points": 10, "note": "immune to player Enzyme cards; only washed by the 4 HAT washing-machine cards"}
+    }
+  },
+  "cards": [
+    {"id": 1,  "number": 1,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_Olive","R1_Pink","R2_Green"]},
+    {"id": 2,  "number": 1,   "rotationAmount": 1, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R1_Pink","R1_BlueBottom","R1_GreenBL","R1_Olive"]},
+    {"id": 3,  "number": 1,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R2_Lavender","R2_Green","R2_Red"]},
+    {"id": 4,  "number": 1,   "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["R3_RedMitten","R3_BlueGlove","R3_GraySock","R3_GreenMitten","R3_KhakiGlove"]},
+    {"id": 5,  "number": 2,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_Olive","R1_Pink","R2_Green"]},
+    {"id": 6,  "number": 2,   "rotationAmount": 1, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R1_Pink","R1_BlueBottom","R1_GreenBL","R1_Olive"]},
+    {"id": 7,  "number": 2,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R2_Lavender","R2_Green","R2_Red"]},
+    {"id": 8,  "number": 2,   "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["R3_RedMitten","R3_BlueGlove","R3_GraySock","R3_GreenMitten","R3_KhakiGlove"]},
+    {"id": 9,  "number": 3,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_Pink","R1_GreenBL","R2_Lavender","R3_KhakiGlove"]},
+    {"id": 10, "number": 3,   "rotationAmount": 1, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R1_Pink","R1_BlueBottom","R1_GreenBL","R1_Olive"]},
+    {"id": 11, "number": 3,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R2_Lavender","R2_Green","R2_Red"]},
+    {"id": 12, "number": 3,   "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["R3_RedMitten","R3_BlueGlove","R3_GraySock","R3_GreenMitten","R3_KhakiGlove"]},
+    {"id": 13, "number": 4,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_Pink","R1_GreenBL","R2_Lavender","R3_KhakiGlove"]},
+    {"id": 14, "number": 4,   "rotationAmount": 1, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R1_Pink","R1_BlueBottom","R1_GreenBL","R1_Olive"]},
+    {"id": 15, "number": 4,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R2_Lavender","R2_Green","R2_Red"]},
+    {"id": 16, "number": 4,   "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["R3_RedMitten","R3_BlueGlove","R3_GraySock","R3_GreenMitten","R3_KhakiGlove"]},
+    {"id": 17, "number": 5,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R3_BlueGlove"]},
+    {"id": 18, "number": 5,   "rotationAmount": 1, "rotationArrow": "up",   "activeWedges": ["R1_Olive","R1_Pink","R2_Green"]},
+    {"id": 19, "number": 5,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R2_Lavender","R2_Green","R2_Red"]},
+    {"id": 20, "number": 5,   "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["R3_RedMitten","R3_BlueGlove","R3_GraySock","R3_GreenMitten","R3_KhakiGlove"]},
+    {"id": 21, "number": "HAT", "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["Hat"]},
+    {"id": 22, "number": "HAT", "rotationAmount": 1, "rotationArrow": "up",   "activeWedges": ["Hat"]},
+    {"id": 23, "number": "HAT", "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["Hat"]},
+    {"id": 24, "number": "HAT", "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["Hat"]},
+    {"id": 25, "number": 1,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R1_Olive","R2_Orange","R2_Red","R3_GreenMitten"], "confidence": "medium - re-verify against source image"},
+    {"id": 26, "number": 2,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R1_BlueTop","R2_Orange","R2_Mustard","R2_Lavender","R2_Red"], "confidence": "medium - re-verify against source image"},
+    {"id": 27, "number": 3,   "rotationAmount": 1, "rotationArrow": "down", "activeWedges": ["R1_BlueTop","R2_Orange","R2_Mustard","R2_Lavender","R2_Red"], "confidence": "medium - re-verify against source image"},
+    {"id": 28, "number": 4,   "rotationAmount": 2, "rotationArrow": "down", "activeWedges": ["R1_BlueTop","R3_BlueGlove","R2_Red"], "confidence": "medium - re-verify against source image"},
+    {"id": 29, "number": 5,   "rotationAmount": 2, "rotationArrow": "up",   "activeWedges": ["R1_BlueTop","R3_BlueGlove","R3_GreenMitten","R2_Red"], "confidence": "medium - re-verify against source image"}
+  ],
+  "sanity_check": "Each number 1-5 appears on exactly 5 of the 29 cards (25 numbered + 4 HAT = 29), which is a clean, symmetric distribution -- a good sign the extraction is largely correct."
+}
